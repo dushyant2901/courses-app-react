@@ -21,7 +21,7 @@ Data.push(Courses)
 
     <div>
       <Form onSubmit={submitHandler} className='my-3'>
-        <FormGroup >
+        {/* <FormGroup >
           <Label for="courseId">Course Id</Label>
           <Input
           required
@@ -31,7 +31,7 @@ Data.push(Courses)
             placeholder="Enter here"
           onChange={(e)=>{setCourse({...Courses,id:Number(e.target.value)})}}
           />
-        </FormGroup>
+        </FormGroup> */}
         <FormGroup>
           <Label for="Title">Course Title</Label>
           <Input
@@ -40,7 +40,7 @@ Data.push(Courses)
             name="Title"
             id="Title"
             placeholder="Enter Title here"
-            onChange={(e)=>{setCourse({...Courses,title:e.target.value})}}
+            onChange={(e)=>{setCourse({...Courses,id:Data.length,title:e.target.value})}}
           />
         </FormGroup>
 

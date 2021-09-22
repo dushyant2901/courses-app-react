@@ -29,12 +29,14 @@ function AllCourses() {
   console.log(Courses);
   const updateCourse = (id) => {
     setCourse(Courses.filter((c) => c.id !== id));
+    console.log('hello')
   };
+
   return (
     <div>
       {Courses.length > 0
         ? Courses.map((item,index) => (
-            <Course course={item} update={updateCourse} index={index}/>
+            <Course course={item} update={updateCourse}  key={index}/>
           ))
         : "No course"}
     </div>

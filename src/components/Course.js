@@ -6,9 +6,10 @@ import {
 //   import '/.Course.css'
 import Data from './Data';
 function Course({course,update}) {
-  const deleteCourse=(index)=>{
-Data.splice(index,1)
-update()
+  const deleteCourse=(id)=>{
+//Data.filter((c)=>c.id !== id)
+Data.splice(id,1)
+update(id)
   }
     return (
         <div>

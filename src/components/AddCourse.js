@@ -4,6 +4,7 @@ import { Button, Form, FormGroup, Label, Input, Container } from "reactstrap";
 import Data from "./Data";
 function AddCourse() {
     const [Courses, setCourse] = useState({})
+
   const submitHandler=(e)=>{e.preventDefault()
     console.log(Courses)
   postDataToServer()
@@ -43,7 +44,8 @@ Data.push(Courses)
             onChange={(e)=>{setCourse({...Courses,id:Data.length,title:e.target.value})}}
           />
         </FormGroup>
-
+       
+         
         <FormGroup>
           <Label for="course-description">Course Description</Label>
           <Input

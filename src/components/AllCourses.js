@@ -39,6 +39,7 @@ function AllCourses() {
             <Course course={item} update={updateCourse}  key={index}/>
           ))
         : "No course"}
+        
     </div>
   );
 }
